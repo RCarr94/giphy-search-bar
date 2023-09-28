@@ -1,25 +1,25 @@
 
-export default function SearchBar({ searchImg, setSearchImg }) {
+export default function SearchBar({ searchImgs, setSearchImgs, getGifs }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    // to be finished with function passing searchImg to app
+    getGifs(searchImgs);
   }
 
   function handleChange(evt) {
-    setSearchImg(evt.target.value);
+    setSearchImgs(evt.target.value);
   }
 
   return(
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-horizontal">
         <input
          type="text"
          placeholder="Search"
-         name="searchImg"
+         name="searchImgs"
          required
          onChange={handleChange}
-         value={searchImg}
+         value={searchImgs}
         />
         <button type="submit">Search</button>
       </form>
