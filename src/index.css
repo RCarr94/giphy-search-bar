@@ -7,9 +7,9 @@
 
 /* Create color variables */
 :root {
-  --primary: #5f9ae0;
-  --secondary: #ff7f50;
-  --secondary-light: #ffa483;
+  --primary: #e0745f;
+  --secondary: #507fff;
+  --secondary-light: #83cdff;
   --white: #fff;
   --muted: #949494;;
 }
