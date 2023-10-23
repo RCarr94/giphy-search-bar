@@ -6,13 +6,13 @@ import GifList from './components/GifList';
 export default function App() {
   const [searchImgs, setSearchImgs] = useState('hello');
   const [gifs, setGifs] = useState([]);
-
+  const apiKey = process.env.GIPHY_API_KEY;
   useEffect(() => {
     getGifs(searchImgs)
   },[]);
 
   const searchOptions = {
-    key: '93sHYga5MbpfCx5UT4WjVAQXXqK4XP9Y',
+    key: apiKey,
     api: 'https://api.giphy.com/v1/gifs/search'
   };
 
